@@ -7,7 +7,7 @@ Package license: GPL-3.0
 
 Feedstock license: BSD 3-Clause
 
-Summary: A tool for working with parameterized simulation models
+Summary: A command-line tool for working with parameterized simulation models
 
 
 
