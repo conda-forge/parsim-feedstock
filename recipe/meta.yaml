@@ -6,12 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: dddae7a06e2c14b82936e269157b144ece1eccc93ceedb2c43786c8cab7e716a
 
 build:
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - psm=parsim.cli:psm_command
     - psm_dakota_driver=parsim.dakota:psm_dakota_driver
@@ -20,16 +20,18 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python {{ python_min }}
   run:
     - numpy
     - pandas
     - pydoe2 >=1.2.1
     - pyexpander >=1.6
-    - python >=3.5
+    - python >={{ python_min }}
     - scipy
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - parsim
   commands:
