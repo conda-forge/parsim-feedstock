@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - psm=parsim.cli:psm_command
     - psm_dakota_driver=parsim.dakota:psm_dakota_driver
@@ -24,8 +24,8 @@ requirements:
   run:
     - numpy
     - pandas
-    - pydoe2 >=1.2.1
-    - pyexpander >=1.6
+    - pydoe3
+    - pyexpander >=1.9
     - python >={{ python_min }}
     - scipy
 
