@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - psm=parsim.cli:psm_command
     - psm_dakota_driver=parsim.dakota:psm_dakota_driver
@@ -20,12 +20,13 @@ build:
 requirements:
   host:
     - pip
+    - setuptools
     - python {{ python_min }}
   run:
     - numpy
     - pandas
-    - pydoe2 >=1.2.1
-    - pyexpander >=1.6
+    - pydoe3
+    - pyexpander >=1.9
     - python >={{ python_min }}
     - scipy
 
@@ -39,7 +40,7 @@ test:
 
 about:
   home: https://gitlab.com/olwi/psm
-  license: GPL-3.0
+  license: GPL-3.0-only
   license_family: GPL
   license_file: LICENSE.txt
   summary: A tool for working with parameterized simulation models
