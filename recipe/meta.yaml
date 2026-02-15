@@ -20,6 +20,7 @@ build:
 requirements:
   host:
     - pip
+    - setuptools
     - python {{ python_min }}
   run:
     - numpy
@@ -39,7 +40,7 @@ test:
 
 about:
   home: https://gitlab.com/olwi/psm
-  license: GPL-3.0
+  license: GPL-3.0-only
   license_family: GPL
   license_file: LICENSE.txt
   summary: A tool for working with parameterized simulation models
