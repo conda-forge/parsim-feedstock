@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/parsim-feedstoc
 
 Home: https://gitlab.com/olwi/psm
 
-Package license: GPL-3.0
+Package license: GPL-3.0-only
 
 Summary: A tool for working with parameterized simulation models
 
